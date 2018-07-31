@@ -20,10 +20,11 @@
             right: 0;
             bottom: 0;
             left: 0;
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
         }
 
-        .layer{
+        .layer {
             height: 100%;
             width: 100%;
         }
@@ -38,10 +39,16 @@
             left: -25%;
         }
 
-                #mirai-kun img {
+        #mirai-kun{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        #mirai-kun img {
             position: relative;
-            bottom: 0px;
-            left: 50%;
+            bottom: 10%;
         }
     </style>
 </head>
@@ -54,10 +61,10 @@
             </div>
         </li>
         <li class="layer accelerate" data-depth="1">
-                <div id="mirai-kun">
-                    <img src="mirai-kun.png" />
-                </div>
-            </li>
+            <div id="mirai-kun">
+                <img src="mirai-kun.png" />
+            </div>
+        </li>
     </ul>
     <script>
         var scene = document.getElementById('scene');
