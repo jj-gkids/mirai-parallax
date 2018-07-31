@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <title>Mirai</title>
+    <style>
+        body {
+            background-color: #0c66b1;
+            color: #FFF;
+        }
+
+        #scene {
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0; padding: 0;
+        }
+
+        .layer{
+            height: 100%;
+            width: 100%;
+        }
+
+        #clouds {
+            position: relative;
+        }
+
+        #clouds img {
+            position: relative;
+            bottom: 0px;
+            left: -25%;
+        }
+
+                #mirai-kun img {
+            position: relative;
+            bottom: 0px;
+            left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul data-relative-input="true" id="scene">
+        <li class="layer accelerate" data-depth="0.2">
+            <div id="clouds">
+                <img src="Clouds.jpg" />
+            </div>
+        </li>
+        <li class="layer accelerate" data-depth="1">
+                <div id="mirai-kun">
+                    <img src="mirai-kun.png" />
+                </div>
+            </li>
+    </ul>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene, {
+            relativeInput: true
+        });
+    </script>
+</body>
+
+</html>
